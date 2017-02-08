@@ -9,7 +9,6 @@
         <link rel="stylesheet" href="../../../../../Semantic-UI-CSS-master/semantic.min.css"/>
         <script src="../../../../../Semantic-UI-CSS-master/semantic.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    </head>
     <body>
         <div class="container">
             {{ content() }}
