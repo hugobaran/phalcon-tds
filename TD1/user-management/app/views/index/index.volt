@@ -20,17 +20,6 @@
         <button class="ui button">Test Semantic</button>
     </div>
 
-<div>
-    <p>Affichage des utilisateurs</p>
-
-    <ul>
-        {% for user in users %}
-            <li>{{ user.getLogin() }}</li>
-        {% endfor %}
-    </ul>
-</div>
-
-
 </body>
 
 </html>
