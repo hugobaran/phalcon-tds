@@ -5,7 +5,26 @@
 </head>
 <body>
 
+
+
 <form class="ui form segment container ">
+
+
+    <div class="ui icon menu">
+        <?= $this->tag->linkTo(['users/', '
+        <i class=\'arrow circle left icon\'></i>Retour à la liste
+        ', 'class' => 'item']) ?>
+    </div>
+    <div class="ui icon message">
+        <i class="info icon"></i>
+        <div class="content">
+            <div class="header">
+                Message
+            </div>
+            <p>Modification de <?= $updateUser->getFirstname() ?> <?= $updateUser->getLastname() ?>.</p>
+        </div>
+    </div>
+
     <h1>Ajout d'un utilisateur</h1>
     <div class="two fields">
         <div class="field">
@@ -18,17 +37,17 @@
         </div>
     </div>
     <div class="two fields">
-        <div class="field">
-            <label>Login *</label>
+        <div class="field required">
+            <label>Login</label>
             <input placeholder="Login" name="login" type="text" value="<?= $updateUser->getLogin() ?>">
         </div>
-        <div class="field">
-            <label>Mot de Passe *</label>
+        <div class="field required ">
+            <label>Mot de Passe</label>
             <input name="mdp" placeholder=".........." type="password" value="<?= $updateUser->getPassword() ?>">
         </div>
     </div>
-    <div class="field">
-        <label>Email *</label>
+    <div class="field required  ">
+        <label>Email</label>
         <input name="Email" placeholder="exemple@exemple.com" type="email" value="<?= $updateUser->getEmail() ?>">
     </div>
     <div class="field">

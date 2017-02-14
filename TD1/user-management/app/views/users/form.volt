@@ -5,7 +5,18 @@
 </head>
 <body>
 
-<form class="ui form segment container ">
+<div class="ui container">
+
+
+
+
+<div class="ui icon menu">
+    {{link_to("users/", "
+        <i class='arrow circle left icon'></i>Retour à la liste
+        ", 'class': 'item')}}
+</div>
+
+<form class="ui form segment">
     <h1>Ajout d'un utilisateur</h1>
     <div class="two fields">
         <div class="field">
@@ -18,17 +29,17 @@
         </div>
     </div>
     <div class="two fields">
-        <div class="field">
-            <label>Login *</label>
+        <div class="field required">
+            <label>Login</label>
             <input placeholder="Login" name="login" type="text">
         </div>
-        <div class="field">
-            <label>Mot de Passe *</label>
+        <div class="field required">
+            <label>Mot de Passe</label>
             <input name="mdp" placeholder=".........." type="password">
         </div>
     </div>
-    <div class="field">
-        <label>Email *</label>
+    <div class="field required">
+        <label>Email</label>
         <input name="Email" placeholder="exemple@exemple.com" type="email">
     </div>
     <div class="field">
@@ -44,7 +55,7 @@
 
     <div class="ui error message"></div>
 </form>
-
+</div>
 </body>
 
 </html>

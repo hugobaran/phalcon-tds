@@ -20,9 +20,10 @@ class UsersController extends ControllerBase
         $this->view->setVar("updateUser", $user);
     }
 
-    public function deleteAction($id)
+    public function showAction($id)
     {
-
+        $user = User::findFirst($id);
+        $this->view->setVar("showUser", $user);
     }
 
     public function messageAction()
