@@ -8,16 +8,29 @@
 <div class="ui container">
 <h2>Liste des utilisateurs</h2>
 
-<div class="ui left icon input loading">
-    <button class="ui icon button"><i class="add user icon"></i><?= $this->tag->linkto('users/form', 'Nouvel utilisateur') ?></button>
-</div>
-
+<!--<a class="ui left icon button" href="<?= $this->url->get('users/form') ?>">
+    <i class="add user icon"></i>Nouvel utilisateur
+</a>
 <div class="ui icon input">
     <i class="search icon"></i>
     <input placeholder="Search..." type="text">
-</div>
+</div>-->
 
+    <div class="ui icon menu">
+        <?= $this->tag->linkTo(['users/form', '
+        <i class=\'user add icon icon\'></i>&nbsp;Nouvel utilisateur
+        ', 'class' => 'item']) ?>
 
+        <div class="ui category search item">
+            <div class="ui transparent icon input">
+                <form method="get">
+                    <input name="filtre" class="prompt" type="text" placeholder="Rechercher...">
+                    <i class="search link icon"></i>
+                </form>
+            </div>
+            <div class="results"></div>
+        </div>
+    </div>
 
 <table class="ui celled table">
     <thead>
@@ -41,8 +54,9 @@
             <td><?= $user->getEmail() ?></td>
             <td><?= $user->getRole()->getName() ?></td>
             <td>
-                <button class="ui icon button"><?= $this->tag->linkto('users/delete', '<i class=\'write icon\'></i>') ?></button>
-                <button class="ui icon button"><?= $this->tag->linkto('users/delete', '<i class=\'red remove icon\'></i>') ?></button>
+                <?= $this->tag->linkto('users/form/' . $user->getId(), '<i class=\'bordered grey edit icon\'></i>') ?>
+                <?= $this->tag->linkto('users/delete/' . $user->getId(), '<i class=\'bordered red remove icon\'></i>') ?>
+                <?= $this->tag->linkto('users/show/' . $user->getId(), '<i class=\'bordered arrow circle right icon\'></i>') ?>
             </td>
         </tr>
     <?php } ?>
