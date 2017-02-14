@@ -16,7 +16,8 @@ class UsersController extends ControllerBase
 
     public function updateAction($id=NULL)
     {
-
+        $user = User::findFirst($id);
+        $this->view->setVar("updateUser", $user);
     }
 
     public function deleteAction($id)

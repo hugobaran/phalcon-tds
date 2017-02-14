@@ -10,7 +10,7 @@
     <div class="two fields">
         <div class="field">
             <label>Prénom</label>
-            <input placeholder="Prénom" name="prenom" type="text">
+            <input placeholder="Prénom" name="prenom" type="text" >
         </div>
         <div class="field">
             <label>Nom</label>

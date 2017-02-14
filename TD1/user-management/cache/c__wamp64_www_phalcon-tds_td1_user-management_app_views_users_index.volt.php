@@ -54,7 +54,7 @@
             <td><?= $user->getEmail() ?></td>
             <td><?= $user->getRole()->getName() ?></td>
             <td>
-                <?= $this->tag->linkto('users/form/' . $user->getId(), '<i class=\'bordered grey edit icon\'></i>') ?>
+                <?= $this->tag->linkto('users/update/' . $user->getId(), '<i class=\'bordered grey edit icon\'></i>') ?>
                 <?= $this->tag->linkto('users/delete/' . $user->getId(), '<i class=\'bordered red remove icon\'></i>') ?>
                 <?= $this->tag->linkto('users/show/' . $user->getId(), '<i class=\'bordered arrow circle right icon\'></i>') ?>
             </td>

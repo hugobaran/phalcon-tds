@@ -54,7 +54,7 @@
             <td>{{ user.getEmail() }}</td>
             <td>{{ user.getRole().getName() }}</td>
             <td>
-                {{linkTo("users/form/"~user.getId(), "<i class='bordered grey edit icon'></i>")}}
+                {{linkTo("users/update/"~user.getId(), "<i class='bordered grey edit icon'></i>")}}
                 {{linkTo("users/delete/"~user.getId(), "<i class='bordered red remove icon'></i>")}}
                 {{linkTo("users/show/"~user.getId(), "<i class='bordered arrow circle right icon'></i>")}}
             </td>
