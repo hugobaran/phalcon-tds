@@ -7,7 +7,7 @@
 
 
 
-<form class="ui form segment container ">
+<form class="ui form segment container" method="post">
 
 
     <div class="ui icon menu">

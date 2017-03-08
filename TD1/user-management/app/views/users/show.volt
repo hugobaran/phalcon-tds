@@ -12,7 +12,7 @@
         <i class='arrow circle left icon'></i>Retour à la liste
         ", 'class': 'item')}}
     </div>
-    
+
     <table class="ui definition table">
 
         <tbody>
